@@ -1,0 +1,10 @@
+Ensemble Models
+Training 13 Models/*/
+
+# WBF outputs
+Weighted-Boxes-Fusion/benchmark_coco/images/
+Weighted-Boxes-Fusion/benchmark_coco/output_images/
+
+Secret1.v19-experiment-1-balance.yolov8
+
+venv
