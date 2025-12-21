@@ -52,6 +52,12 @@
 
 | Model | Precision | Recall | F1 |
 |------|-----------|--------|----|
+| ensemble_nmw_diff_size-test.csv | 0.724 | 0.959 | 0.825 |
+
+## NMW - Different Model Version
+
+| Model | Precision | Recall | F1 |
+|------|-----------|--------|----|
 | ensemble_nmw_diff_version-test.csv | 0.773 | 0.967 | 0.859 |
 
 ## Single Models - 5 Fold

@@ -140,7 +140,7 @@ if __name__ == "__main__":
         "NMW - Different Model Sizes": [
             "ensemble_nmw_diff_size-test.csv",
         ],
-        "NMW - Different Model Sizes": [
+        "NMW - Different Model Version": [
             "ensemble_nmw_diff_version-test.csv",
         ],
         "Single Models - 5 Fold": [
