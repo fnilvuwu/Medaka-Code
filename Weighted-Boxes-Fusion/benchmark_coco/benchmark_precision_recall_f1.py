@@ -179,7 +179,7 @@ if __name__ == "__main__":
     with open(md_path, "w") as f:
         f.write("# YOLO-style Precision / Recall / F1\n\n")
         f.write("- Confidence threshold: **0.25**\n")
-        f.write("- IoU threshold: **0.7**\n\n")
+        f.write("- IoU threshold: **0.75**\n\n")
 
         for group_name, models in groups.items():
             rows = []
@@ -187,7 +187,7 @@ if __name__ == "__main__":
                 p, r, f1 = yolo_pr_f1(
                     f"./model_predictions/{m}",
                     coco_json="instances_test.json",
-                    conf_thr=0.25,
+                    conf_thr=0.5,
                     iou_thr=0.7,
                     max_det=100
                 )
