@@ -2,6 +2,10 @@ import pandas as pd
 from pycocotools.coco import COCO
 
 
+import pandas as pd
+from pycocotools.coco import COCO
+
+
 # --------------------------------------------------
 # IoU computation
 # --------------------------------------------------
@@ -40,11 +44,10 @@ def load_gt_boxes(coco_json):
             )
     return coco, gt
 
-
 # --------------------------------------------------
-# YOLO-style PR/F1
+# YOLO-style PR/F1 (with max_det)
 # --------------------------------------------------
-def yolo_pr_f1(pred_csv, coco_json, conf_thr=0.25, iou_thr=0.7):
+def yolo_pr_f1(pred_csv, coco_json, conf_thr=0.25, iou_thr=0.7, max_det=300):
     coco, gt_boxes = load_gt_boxes(coco_json)
     preds = pd.read_csv(pred_csv)
 
@@ -61,7 +64,14 @@ def yolo_pr_f1(pred_csv, coco_json, conf_thr=0.25, iou_thr=0.7):
         img_info = coco.loadImgs(img_id)[0]
         W, H = img_info["width"], img_info["height"]
 
+        # confidence filter
         img_preds = img_preds[img_preds["score"] >= conf_thr]
+
+        # IMPORTANT: sort by confidence (YOLO / COCO behavior)
+        img_preds = img_preds.sort_values("score", ascending=False)
+
+        # IMPORTANT: limit max detections per image
+        img_preds = img_preds.head(max_det)
 
         for _, p in img_preds.iterrows():
             pred_box = [
@@ -93,7 +103,6 @@ def yolo_pr_f1(pred_csv, coco_json, conf_thr=0.25, iou_thr=0.7):
     f1 = 2 * precision * recall / (precision + recall + 1e-9)
 
     return precision, recall, f1
-
 
 # --------------------------------------------------
 # Markdown writer
@@ -180,6 +189,7 @@ if __name__ == "__main__":
                     coco_json="instances_test.json",
                     conf_thr=0.25,
                     iou_thr=0.7,
+                    max_det=100
                 )
                 rows.append({"name": m, "p": p, "r": r, "f1": f1})
 

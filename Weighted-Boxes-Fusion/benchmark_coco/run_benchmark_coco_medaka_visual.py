@@ -468,13 +468,13 @@ def ensemble(
 
 
 if __name__ == "__main__":
-    if 0:
+    if 1:
         params = {
             "run_type": "nms",
             "iou_thr": 0.7,
             "verbose": True,
         }
-    if 1:
+    if 0:
         params = {
             "run_type": "soft-nms",
             "iou_thr": 0.7,
@@ -547,7 +547,7 @@ if __name__ == "__main__":
         params,
         get_score_init=False,
         visualize=True,
-        output_dir="./output_images_ensemble_soft_nms_different_size",  # Changed output directory name for clarity
+        output_dir="./output_images_ensemble_nms_different_size",  # Changed output directory name for clarity
     )
 
     # Single model evaluation with visualization

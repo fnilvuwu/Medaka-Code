@@ -294,14 +294,14 @@ if __name__ == '__main__':
     if 1:
         params = {
             'run_type': 'nms',
-            'iou_thr': 0.5,
+            'iou_thr': 0.7,
             'conf_type': 'avg',
             'verbose': True,
         }
     if 0:
         params = {
             'run_type': 'soft-nms',
-            'iou_thr': 0.5,
+            'iou_thr': 0.7,
             'thresh': 0.0001,
             'sigma': 0.1,
             'verbose': True,
@@ -310,7 +310,7 @@ if __name__ == '__main__':
         params = {
             'run_type': 'nmw',
             'skip_box_thr': 0.000000001,
-            'intersection_thr': 0.5,
+            'intersection_thr': 0.7,
             'limit_boxes': 30000,
             'verbose': True,
         }
@@ -337,66 +337,32 @@ if __name__ == '__main__':
 
     in_dir = './model_predictions/'
     benchmark_csv = [
-        in_dir + 'YOLOv8-fold1-test.csv',
-        # in_dir + 'YOLOv8-fold1-test-horizontal-mirror.csv',
-        # in_dir + 'YOLOv8-fold1-test-vertical-mirror.csv',
-        # in_dir + 'YOLOv8-fold1-test-rotate-90-left.csv',
-        # in_dir + 'YOLOv8-fold1-test-rotate-90-right.csv',
+        # 5 Fold
+        # in_dir + "YOLOv8-fold1-test.csv",
+        # in_dir + "YOLOv8-fold2-test.csv",
+        # in_dir + "YOLOv8-fold3-test.csv",
+        # in_dir + "YOLOv8-fold4-test.csv",
+        # in_dir + "YOLOv8-fold5-test.csv",
 
-        in_dir + 'YOLOv8-fold2-test.csv',
-        # in_dir + 'YOLOv8-fold2-test-horizontal-mirror.csv',
-        # in_dir + 'YOLOv8-fold2-test-vertical-mirror.csv',
-        # in_dir + 'YOLOv8-fold2-test-rotate-90-left.csv',
-        # in_dir + 'YOLOv8-fold2-test-rotate-90-right.csv',
-
-        in_dir + 'YOLOv8-fold3-test.csv',
-        # in_dir + 'YOLOv8-fold3-test-horizontal-mirror.csv',
-        # in_dir + 'YOLOv8-fold3-test-vertical-mirror.csv',
-        # in_dir + 'YOLOv8-fold3-test-rotate-90-left.csv',
-        # in_dir + 'YOLOv8-fold3-test-rotate-90-right.csv',
-
-        in_dir + 'YOLOv8-fold4-test.csv',
-        # in_dir + 'YOLOv8-fold4-test-horizontal-mirror.csv',
-        # in_dir + 'YOLOv8-fold4-test-vertical-mirror.csv',
-        # in_dir + 'YOLOv8-fold4-test-rotate-90-left.csv',
-        # in_dir + 'YOLOv8-fold4-test-rotate-90-right.csv',
-
-        in_dir + 'YOLOv8-fold5-test.csv',
-        # in_dir + 'YOLOv8-fold5-test-horizontal-mirror.csv',
-        # in_dir + 'YOLOv8-fold5-test-vertical-mirror.csv',
-        # in_dir + 'YOLOv8-fold5-test-rotate-90-left.csv',
-        # in_dir + 'YOLOv8-fold5-test-rotate-90-right.csv',
-
+        # Different Size
         # in_dir + 'YOLOv8n-test.csv',
-        # in_dir + 'YOLOv8n-test-horizontal-mirror.csv',
-        # in_dir + 'YOLOv8n-test-vertical-mirror.csv',
-        # in_dir + 'YOLOv8n-test-rotate-90-left.csv',
-        # in_dir + 'YOLOv8n-test-rotate-90-right.csv',
-
-
         # in_dir + 'YOLOv8s-test.csv',
         # in_dir + 'YOLOv8m-test.csv',
         # in_dir + 'YOLOv8l-test.csv',
         # in_dir + 'YOLOv8x-test.csv',
 
-        # in_dir + 'YOLOv8n-test.csv',
-        # in_dir + 'YOLOv9t-test.csv',
-        # in_dir + 'YOLOv10n-test.csv',
-        # in_dir + 'YOLOv11n-test.csv',
-
-        # in_dir + 'YOLOv8n-test-horizontal-mirror.csv',
-        # in_dir + 'YOLOv9t-test-horizontal-mirror.csv',
-        # in_dir + 'YOLOv10n-test-horizontal-mirror.csv',
-        # in_dir + 'YOLOv11n-test-horizontal-mirror.csv',
-
+        # Different Version
+        in_dir + 'YOLOv8n-test.csv',
+        in_dir + 'YOLOv9t-test.csv',
+        in_dir + 'YOLOv10n-test.csv',
+        in_dir + 'YOLOv11n-test.csv',
     ]
 
-    # ensemble evaluation
-    # weights = [1] * 25
-    # weights=[1, 2, 1, 3, 1]
-    weights = [1, 1, 1, 1, 1]
-    # weights = [2, 3, 2, 1, 1]
-    # weights = [3, 3, 3, 3, 3, 1, 1, 1, 1, 2, 2, 2, 2]
+    # Weight 5 Fold/Different Size
+    # weights = [1, 1, 1, 1, 1]
+
+    # Weight Different Version
+    weights = [1, 1, 1, 1]
 
 
     assert(len(benchmark_csv) == len(weights))

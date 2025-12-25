@@ -7,7 +7,7 @@
 
 | Model | Precision | Recall | F1 |
 |------|-----------|--------|----|
-| ensemble_wbf_5_fold-test.csv | 0.951 | 0.951 | 0.951 |
+| ensemble_wbf_5_fold-test.csv | 0.915 | 0.959 | 0.937 |
 
 ## WBF - Different Model Sizes
 
@@ -26,20 +26,20 @@
 | Model | Precision | Recall | F1 |
 |------|-----------|--------|----|
 | ensemble_nms_5_fold-test.csv | 0.766 | 0.959 | 0.852 |
-| ensemble_soft-nms_5_fold-test.csv | 0.748 | 0.967 | 0.844 |
+| ensemble_soft-nms_5_fold-test.csv | 0.779 | 0.976 | 0.866 |
 
 ## NMS - Different Model Sizes
 
 | Model | Precision | Recall | F1 |
 |------|-----------|--------|----|
-| ensemble_nms_diff_size-test.csv | 0.766 | 0.959 | 0.852 |
+| ensemble_nms_diff_size-test.csv | 0.730 | 0.967 | 0.832 |
 | ensemble_soft-nms_diff_size-test.csv | 0.682 | 0.959 | 0.797 |
 
 ## NMS - Different Model Version
 
 | Model | Precision | Recall | F1 |
 |------|-----------|--------|----|
-| ensemble_nms_diff_version-test.csv | 0.730 | 0.967 | 0.832 |
+| ensemble_nms_diff_version-test.csv | 0.766 | 0.959 | 0.852 |
 | ensemble_soft-nms_diff_version-test.csv | 0.733 | 0.959 | 0.831 |
 
 ## NMW - 5 Fold Ensemble
