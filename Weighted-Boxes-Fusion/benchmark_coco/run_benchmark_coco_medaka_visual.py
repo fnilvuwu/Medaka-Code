@@ -514,18 +514,18 @@ if __name__ == "__main__":
     in_dir = "./model_predictions/"
     benchmark_csv = [
         # 5 Fold
-        # in_dir + "YOLOv8-fold1-test.csv",
-        # in_dir + "YOLOv8-fold2-test.csv",
-        # in_dir + "YOLOv8-fold3-test.csv",
-        # in_dir + "YOLOv8-fold4-test.csv",
-        # in_dir + "YOLOv8-fold5-test.csv",
+        in_dir + "YOLOv8-fold1-test.csv",
+        in_dir + "YOLOv8-fold2-test.csv",
+        in_dir + "YOLOv8-fold3-test.csv",
+        in_dir + "YOLOv8-fold4-test.csv",
+        in_dir + "YOLOv8-fold5-test.csv",
 
         # Different Size
-        in_dir + 'YOLOv8n-test.csv',
-        in_dir + 'YOLOv8s-test.csv',
-        in_dir + 'YOLOv8m-test.csv',
-        in_dir + 'YOLOv8l-test.csv',
-        in_dir + 'YOLOv8x-test.csv',
+        # in_dir + 'YOLOv8n-test.csv',
+        # in_dir + 'YOLOv8s-test.csv',
+        # in_dir + 'YOLOv8m-test.csv',
+        # in_dir + 'YOLOv8l-test.csv',
+        # in_dir + 'YOLOv8x-test.csv',
 
         # Different Version
         # in_dir + 'YOLOv8n-test.csv',
@@ -547,7 +547,7 @@ if __name__ == "__main__":
         params,
         get_score_init=False,
         visualize=True,
-        output_dir="./output_images_ensemble_nms_different_size",  # Changed output directory name for clarity
+        output_dir="./output_images_ensemble_nms_5_fold_new",  # Changed output directory name for clarity
     )
 
     # Single model evaluation with visualization

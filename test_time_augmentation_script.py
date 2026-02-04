@@ -89,7 +89,7 @@ def create_all_augmentations():
     Create horizontal mirror, vertical mirror, rotate 90 left, rotate 90 right datasets for YOLO format
     """
     base_dir = (
-        r"d:\Penelitian Medaka (Code) (ONGOING)\Secret1.v19-experiment-1-balance.yolov8"
+        r"D:\Medaka-Code\Secret1.v19-experiment-1-balance.yolov8"
     )
     test_images_dir = os.path.join(base_dir, "test", "images")
     test_labels_dir = os.path.join(base_dir, "test", "labels")
@@ -190,7 +190,7 @@ def verify_mirror_transformation(
     Verify the mirror transformation by comparing original and mirrored annotations
     """
     base_dir = (
-        r"d:\Penelitian Medaka (Code) (ONGOING)\Secret1.v19-experiment-1-balance.yolov8"
+        r"d:\Medaka-Code\Secret1.v19-experiment-1-balance.yolov8"
     )
 
     # Original files

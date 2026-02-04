@@ -95,8 +95,9 @@ def visualize_yolo_ground_truth(
 
     print(f"Ground-truth visualization saved to: {output_dir}")
 
+# Example usage
 visualize_yolo_ground_truth(
-    images_dir=r"Secret1.v19-experiment-1-balance.yolov8\test\images",
-    labels_dir=r"Secret1.v19-experiment-1-balance.yolov8\test\labels",
-    output_dir=r"Secret1.v19-experiment-1-balance.yolov8\test-ground-truth"
+    images_dir=r"Secret1.v19-experiment-1-balance.yolov8\train\images",
+    labels_dir=r"Secret1.v19-experiment-1-balance.yolov8\train\labels",
+    output_dir=r"Secret1.v19-experiment-1-balance.yolov8\train-ground-truth"
 )

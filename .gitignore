@@ -5,6 +5,10 @@ Training 13 Models/*/
 Weighted-Boxes-Fusion/benchmark_coco/images/
 Weighted-Boxes-Fusion/benchmark_coco/output_images/
 
-Secret1.v19-experiment-1-balance.yolov8
+Secret1.v19-experiment-1-balance.yolov8/*
+Medaka-Object-Detection-Dataset.v24-dataset-balance.yolov8/*
+Medaka-Object-Detection-Dataset.v23-dataset-balance-raw.yolov8/*
 
 venv
+
+Weighted-Boxes-Fusion/benchmark_coco/model_predictions/*
