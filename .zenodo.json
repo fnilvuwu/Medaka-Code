@@ -1,0 +1,44 @@
+{
+  "upload_type": "dataset",
+  "title": "Medaka-EL: Mixed Medaka Ricefish (MMR) dataset annotations, cross-validation folds, trained models and evaluation code",
+  "description": "<p>Data and code accompanying the article <em>Medaka-EL: A Robust Ensemble Learning Framework for the Detection of Indonesian Ricefish under Data Scarcity</em>.</p><p>The repository contains the bounding-box annotations of the Mixed Medaka Ricefish (MMR) dataset (1,139 images; 1,239 instances) for <em>Oryzias celebensis</em> (class 0) and <em>Oryzias javanicus</em> (class 1) in YOLO format, the group-aware stratified hold-out and 5-fold assignments, the trained YOLOv8n fold models, the per-image predictions, and the scripts for ensemble fusion (NMS, Soft-NMS, NMW and WBF), bootstrap significance testing, robustness and runtime evaluation. Web images whose licences do not permit redistribution are provided as source URLs, licence information and file hashes with a download script.</p>",
+  "creators": [
+    {
+      "name": "Raman, Rahmatullah",
+      "affiliation": "Study Program of Information Systems, Hasanuddin University, Indonesia"
+    },
+    {
+      "name": "Haerul, Muhammad",
+      "affiliation": "Study Program of Information Systems, Hasanuddin University, Indonesia"
+    },
+    {
+      "name": "Al Faath, Khalilullah",
+      "affiliation": "Department of Computer Science and Electronics, Gadjah Mada University, Indonesia"
+    },
+    {
+      "name": "Ismail, Iman Mustika",
+      "affiliation": "Department of Human Intelligence Systems, Kyushu Institute of Technology, Japan"
+    },
+    {
+      "name": "Mappayompa, Faizah",
+      "affiliation": "Department of Human Intelligence Systems, Kyushu Institute of Technology, Japan"
+    },
+    {
+      "name": "Lawi, Armin",
+      "affiliation": "Data Science and Artificial Intelligence (DSAI) Research Group, Hasanuddin University, Indonesia"
+    }
+  ],
+  "keywords": [
+    "Oryzias celebensis",
+    "Oryzias javanicus",
+    "Cross-validation",
+    "Weighted Boxes Fusion",
+    "YOLO",
+    "Bootstrap significance testing",
+    "Ecological monitoring",
+    "Freshwater fish"
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "notes": "Supported by Universitas Hasanuddin under the International Collaboration Research (I-CORE) internal grant scheme (Contract No. 12610/UN4.1/KEP/2023)."
+}
